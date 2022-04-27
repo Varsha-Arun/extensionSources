@@ -1,0 +1,20 @@
+resources:
+  - name: gitRepo_ext
+    type: GitRepo
+    configuration:
+      gitProvider: varsha_github
+      path: Varsha-Arun/extension
+
+pipelines:
+  - name: extensions_pipelines
+    steps:
+      - name: extension_step
+        type: gitExt/newStep
+        syntaxVersion: latest
+        configuration:              
+          foo: bar
+          inputResources:
+            - name: gitRepo_ext
+        execution:
+          onStart:
+            - echo "Preparing for work..."
