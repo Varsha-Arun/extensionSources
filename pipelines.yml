@@ -2,7 +2,7 @@ resources:
   - name: gitRepo_ext
     type: GitRepo
     configuration:
-      gitProvider: v_github
+      gitProvider: varsha_github
       path: Varsha-Arun/extension
 
 pipelines:
